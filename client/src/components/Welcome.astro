@@ -1,0 +1,50 @@
+---
+console.log("Hello From Front Matter");
+---
+
+<div id="container">
+  <button id="alert-button" class="button">Click me!</button>
+</div>
+
+<style>
+  #container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: "Inter", sans-serif;
+  }
+
+  .button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+  }
+
+  .button:hover {
+    background: linear-gradient(135deg, #5a0eb4 0%, #1f66e0 100%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.03);
+  }
+
+  .button:active {
+    transform: scale(0.98);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById("alert-button") as HTMLButtonElement;
+    button.addEventListener("click", () => {
+      alert("Hello from Astro! 🎉");
+    });
+  });
+</script>
